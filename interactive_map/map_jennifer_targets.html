@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a34a7e62d11904591f6d697b117525b7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a34a7e62d11904591f6d697b117525b7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a34a7e62d11904591f6d697b117525b7 = L.map(
+                "map_a34a7e62d11904591f6d697b117525b7",
+                {
+                    center: [47.6, -122.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1cf59c7ba2d9d8153fd3bbbf4456cb4f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1cf59c7ba2d9d8153fd3bbbf4456cb4f.addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var marker_a96a741cc4ac922201f4f2bdf4570ec6 = L.marker(
+                [47.557, -122.21],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_3c1cc1fb76b77d4a50c0d01e306d5bfb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1283f1838e6eb09c4041b25f5b646e99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91746b19eed9562a72325293b72764fb = $(`<div id="html_91746b19eed9562a72325293b72764fb" style="width: 100.0%; height: 100.0%;"><b>Waterfront + High Grade</b><br>Price: $4,670,000<br>Grade: 12<br>View: 4.0<br>Zip: 98040</div>`)[0];
+                popup_1283f1838e6eb09c4041b25f5b646e99.setContent(html_91746b19eed9562a72325293b72764fb);
+            
+        
+
+        marker_a96a741cc4ac922201f4f2bdf4570ec6.bindPopup(popup_1283f1838e6eb09c4041b25f5b646e99)
+        ;
+
+        
+    
+    
+                marker_a96a741cc4ac922201f4f2bdf4570ec6.setIcon(icon_3c1cc1fb76b77d4a50c0d01e306d5bfb);
+            
+    
+            var marker_d86206ae35efba09ef5c2432c650595c = L.marker(
+                [47.6083, -122.11],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_4e833695bf6db76cc0abe560e6d4c289 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08fd7225709288c84919888c159fb8aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bafe386debc6396bc999c3c3567e7db4 = $(`<div id="html_bafe386debc6396bc999c3c3567e7db4" style="width: 100.0%; height: 100.0%;"><b>Waterfront + High Grade</b><br>Price: $3,300,000<br>Grade: 11<br>View: 4.0<br>Zip: 98008</div>`)[0];
+                popup_08fd7225709288c84919888c159fb8aa.setContent(html_bafe386debc6396bc999c3c3567e7db4);
+            
+        
+
+        marker_d86206ae35efba09ef5c2432c650595c.bindPopup(popup_08fd7225709288c84919888c159fb8aa)
+        ;
+
+        
+    
+    
+                marker_d86206ae35efba09ef5c2432c650595c.setIcon(icon_4e833695bf6db76cc0abe560e6d4c289);
+            
+    
+            var marker_7fd67e9213029d059e504824146c324b = L.marker(
+                [47.5925, -122.287],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_65a1e358034e917a7868e1f2e769ba7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5aa8301c22ad438c0966a0aa970d0fc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_137be61606b0ea04991599f87906accc = $(`<div id="html_137be61606b0ea04991599f87906accc" style="width: 100.0%; height: 100.0%;"><b>Waterfront + High Grade</b><br>Price: $3,600,000<br>Grade: 10<br>View: 4.0<br>Zip: 98144</div>`)[0];
+                popup_5aa8301c22ad438c0966a0aa970d0fc2.setContent(html_137be61606b0ea04991599f87906accc);
+            
+        
+
+        marker_7fd67e9213029d059e504824146c324b.bindPopup(popup_5aa8301c22ad438c0966a0aa970d0fc2)
+        ;
+
+        
+    
+    
+                marker_7fd67e9213029d059e504824146c324b.setIcon(icon_65a1e358034e917a7868e1f2e769ba7e);
+            
+    
+            var marker_5bdfe5a5a1c4603b0f9d328f2892f8d0 = L.marker(
+                [47.5466, -122.197],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_849abf3b1efe946604e1dd3815034e48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb1c72984365d8751a0da4b4ee39d0aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9df529dbaf410bb04c6950847689bba2 = $(`<div id="html_9df529dbaf410bb04c6950847689bba2" style="width: 100.0%; height: 100.0%;"><b>Waterfront + High Grade</b><br>Price: $1,800,000<br>Grade: 10<br>View: 4.0<br>Zip: 98006</div>`)[0];
+                popup_cb1c72984365d8751a0da4b4ee39d0aa.setContent(html_9df529dbaf410bb04c6950847689bba2);
+            
+        
+
+        marker_5bdfe5a5a1c4603b0f9d328f2892f8d0.bindPopup(popup_cb1c72984365d8751a0da4b4ee39d0aa)
+        ;
+
+        
+    
+    
+                marker_5bdfe5a5a1c4603b0f9d328f2892f8d0.setIcon(icon_849abf3b1efe946604e1dd3815034e48);
+            
+    
+            var marker_cab90dcc9e70958619ebeedc131af4f1 = L.marker(
+                [47.4418, -122.354],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_5fbd0486544334f8b32e1c34ba5353fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a9c38a6a1265e637dd8195bbb99949c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cb39646aacf813582ca349cad6e4412 = $(`<div id="html_1cb39646aacf813582ca349cad6e4412" style="width: 100.0%; height: 100.0%;"><b>Waterfront + High Grade</b><br>Price: $1,640,000<br>Grade: 12<br>View: 4.0<br>Zip: 98166</div>`)[0];
+                popup_9a9c38a6a1265e637dd8195bbb99949c.setContent(html_1cb39646aacf813582ca349cad6e4412);
+            
+        
+
+        marker_cab90dcc9e70958619ebeedc131af4f1.bindPopup(popup_9a9c38a6a1265e637dd8195bbb99949c)
+        ;
+
+        
+    
+    
+                marker_cab90dcc9e70958619ebeedc131af4f1.setIcon(icon_5fbd0486544334f8b32e1c34ba5353fa);
+            
+    
+            var marker_950ac19a624f749c581c16be57a9a444 = L.marker(
+                [47.557, -122.21],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_da5b82fc92bd7396b66b6e7cfa5058b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29e2b444f96e16e525aee6e09deca279 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea237a440b814166f1e2f2830bc78321 = $(`<div id="html_ea237a440b814166f1e2f2830bc78321" style="width: 100.0%; height: 100.0%;"><b>⭐ TOP RECOMMENDATION</b><br>Price: $4,670,000<br>Grade: 12<br>Exclusivity: 21.4<br>Zip: 98040</div>`)[0];
+                popup_29e2b444f96e16e525aee6e09deca279.setContent(html_ea237a440b814166f1e2f2830bc78321);
+            
+        
+
+        marker_950ac19a624f749c581c16be57a9a444.bindPopup(popup_29e2b444f96e16e525aee6e09deca279)
+        ;
+
+        
+    
+    
+                marker_950ac19a624f749c581c16be57a9a444.setIcon(icon_da5b82fc92bd7396b66b6e7cfa5058b7);
+            
+    
+            var marker_717c23f728f56c8cba4acd30e6a5f543 = L.marker(
+                [47.6083, -122.11],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_a77ae0ee5c4c82c103cba97146ca0ee7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b0b8fc2b9d178b4758ea9a815e395c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_625977e9b44ec2c618709673995e7863 = $(`<div id="html_625977e9b44ec2c618709673995e7863" style="width: 100.0%; height: 100.0%;"><b>⭐ TOP RECOMMENDATION</b><br>Price: $3,300,000<br>Grade: 11<br>Exclusivity: 12.9<br>Zip: 98008</div>`)[0];
+                popup_1b0b8fc2b9d178b4758ea9a815e395c5.setContent(html_625977e9b44ec2c618709673995e7863);
+            
+        
+
+        marker_717c23f728f56c8cba4acd30e6a5f543.bindPopup(popup_1b0b8fc2b9d178b4758ea9a815e395c5)
+        ;
+
+        
+    
+    
+                marker_717c23f728f56c8cba4acd30e6a5f543.setIcon(icon_a77ae0ee5c4c82c103cba97146ca0ee7);
+            
+    
+            var marker_7d04aaca9f6a620bd7934e6d32f27a97 = L.marker(
+                [47.5925, -122.287],
+                {
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+        
+    
+            var icon_cd2bec6cd034e656a1dba516b6b8b891 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7e73c8f3c1142982e075af99986326d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0682938651d05ed448ee542339044caa = $(`<div id="html_0682938651d05ed448ee542339044caa" style="width: 100.0%; height: 100.0%;"><b>⭐ TOP RECOMMENDATION</b><br>Price: $3,600,000<br>Grade: 10<br>Exclusivity: 9.6<br>Zip: 98144</div>`)[0];
+                popup_c7e73c8f3c1142982e075af99986326d.setContent(html_0682938651d05ed448ee542339044caa);
+            
+        
+
+        marker_7d04aaca9f6a620bd7934e6d32f27a97.bindPopup(popup_c7e73c8f3c1142982e075af99986326d)
+        ;
+
+        
+    
+    
+                marker_7d04aaca9f6a620bd7934e6d32f27a97.setIcon(icon_cd2bec6cd034e656a1dba516b6b8b891);
+            
+    
+            var layer_control_0944ca6e078d5f643a8698a8098286b5_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1cf59c7ba2d9d8153fd3bbbf4456cb4f,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_0944ca6e078d5f643a8698a8098286b5 = L.control.layers(
+                layer_control_0944ca6e078d5f643a8698a8098286b5_layers.base_layers,
+                layer_control_0944ca6e078d5f643a8698a8098286b5_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_a34a7e62d11904591f6d697b117525b7);
+
+        
+</script>
+</html>
