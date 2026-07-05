@@ -51,18 +51,15 @@ eda_project_bootcamp/
 
 ## Features
 
-### Data Cleaning & Imputation
-- **Handling Missing Values**: The project includes a custom utility `cartesian_interpolation.py` to handle missing values in critical features like waterfront and year_renovated.
+### Exploratory Data Analysis (EDA)
+- **Data Cleaning & Imputation**: Handles missing values in critical features.
+- **Hypothesis Testing**: Validates 7 hypotheses about price drivers and market timing.
+- **Market Insights**: Identifies optimal buying/selling strategies.
+- **Property Recommendations**: Finds properties matching specific luxury criteria.
 
-### Hypothesis Testing
-- **7 Testable Hypotheses**: The analysis validates 7 hypotheses about price drivers and market timing, providing actionable insights for luxury property buyers.
-
-### Market Insights
-- **Optimal Timing**: Identifies the best day to buy and sell luxury properties based on historical data.
-- **Top Price Drivers**: Highlights features that have the strongest correlation with property prices, such as living area, grade, and sqft_above.
-
-### Property Recommendations
-- **Custom Recommendations**: Generates tailored property recommendations for high-end buyers based on specific criteria like waterfront, renovation status, grade, and view quality.
+### Visualization
+- **Interactive Maps**: Uses Folium to create interactive maps of recommended properties.
+- **Correlation Matrix**: Visualizes relationships between features using Seaborn.
 
 ## How It Works
 
@@ -76,44 +73,46 @@ The project follows a structured 9-step approach:
 6. **Data Cleaning** - Apply transformations and handle missing values.
 7. **Hypotheses Investigation** - Test and visualize each hypothesis.
 8. **Client Insights** - Filter properties and generate recommendations.
-9. **Final Results** - Summarize findings and deliver insights.
+9. **Final Results** - Summarize findings and delivery.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
-| Jupyter Notebook | Main analysis environment |
-| Python 3.11.3 | Programming language |
-| Pandas | Data manipulation and analysis |
-| NumPy | Numerical computing |
-| Matplotlib & Seaborn | Data visualization |
-| Folium | Interactive maps |
-| Altair | Statistical visualizations |
-| SQLAlchemy | Database interaction |
-| psycopg2-binary | PostgreSQL database adapter |
-| ipywidgets | Interactive widgets for Jupyter notebooks |
-| jupyterlab-dash | Integration of Dash apps in JupyterLab |
-| python-dotenv | Loading environment variables |
+| Jupyter Notebook | Primary development environment for data analysis and visualization. |
+| Python | Programming language used for data manipulation, analysis, and visualization. |
+| Pandas | Data manipulation and analysis library. |
+| NumPy | Numerical computing library. |
+| Matplotlib & Seaborn | Data visualization libraries. |
+| Folium | Interactive maps library. |
+| Altair | Declarative statistical visualization library. |
+| SQLAlchemy | SQL toolkit and Object-Relational Mapping (ORM) library. |
+| psycopg2-binary | PostgreSQL database adapter for Python. |
+| ipywidgets | Interactive widgets for Jupyter Notebook. |
+| jupyterlab-dash | Integration of Dash with JupyterLab. |
+| python-dotenv | Loads environment variables from a `.env` file. |
 
 ## Requirements
 
-- **Python 3.11.3**: Ensure you have the correct Python version installed.
-- **pyenv**: For managing multiple Python versions.
+- pyenv
+- python==3.11.3
 
 ## Installation
 
 ### macOS Setup
 
-```bash
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+1. Set Python version and create virtual environment:
+   ```bash
+   pyenv local 3.11.3
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
 
-### Windows Setup (PowerShell)
+### Windows Setup
 
+For **PowerShell**:
 ```powershell
 pyenv local 3.11.3
 python -m venv .venv
@@ -122,8 +121,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### Windows Setup (Git-Bash)
-
+For **Git-Bash**:
 ```bash
 pyenv local 3.11.3
 python -m venv .venv
@@ -134,45 +132,85 @@ pip install -r requirements.txt
 
 ## Configuration
 
-No specific configuration files are required for this project.
+No specific configuration files or environment variables are required.
 
 ## Quick Start
 
-To get started, clone the repository and run the main analysis notebook:
+To run the project, follow these steps:
 
-```bash
-git clone https://github.com/PartORG/eda_project_bootcamp.git
-cd eda_project_bootcamp
-jupyter lab EDA_Project.ipynb
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PartORG/eda_project_bootcamp.git
+   cd eda_project_bootcamp
+   ```
+
+2. Set up the virtual environment and install dependencies:
+   ```bash
+   pyenv local 3.11.3
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+3. Run the Jupyter Notebook:
+   ```bash
+   jupyter lab EDA_Project.ipynb
+   ```
 
 ## Usage
 
-Run the Jupyter Notebook `EDA_Project.ipynb` to execute the analysis. The notebook includes detailed steps and visualizations.
+To use this project, open the `EDA_Project.ipynb` notebook in JupyterLab and follow the steps outlined in the analysis.
 
 ## Project Structure
 
-- **EDA_Project.ipynb**: Main analysis notebook.
-- **Fetch_Data_to_CSV.ipynb**: Script for fetching data from PostgreSQL.
-- **data/eda.csv**: King County housing dataset.
-- **images/**: Directory containing generated visualizations.
-- **utils/cartesian_interpolation.py**: Custom utility for handling missing values.
-- **useful_documentation/**: Project requirements and guides.
-- **map_jennifer_targets.html**: Interactive map of recommended properties.
+```
+eda_project_bootcamp/
+├── EDA_Project.ipynb           # Main analysis notebook with all steps
+├── Fetch_Data_to_CSV.ipynb     # Data extraction from PostgreSQL
+├── data/
+│   └── eda.csv                 # King County housing dataset
+├── images/                     # Generated visualizations
+├── utils/
+│   └── cartesian_interpolation.py  # Custom imputation function
+├── useful_documentation/       # Project requirements and guides
+├── map_jennifer_targets.html   # Interactive map of recommended properties
+└── requirements.txt            # Python dependencies
+```
 
 ## Development
 
-The project is open-source, and contributions are welcome. Follow the guidelines in [CONTRIBUTING.md](https://github.com/PartORG/eda_project_bootcamp/blob/main/CONTRIBUTING.md).
+The project is primarily developed using Jupyter Notebook. Dependencies are managed via `requirements.txt`.
 
 ## Testing
 
-No tests are included in this project.
+No tests exist for this project.
 
 ## Limitations
 
-- **Data Source**: The analysis relies on a single dataset, which may not be representative of the entire housing market.
-- **Hypothesis Validation**: Hypotheses are based on historical data and may not hold true for future trends.
+- The analysis assumes the dataset is complete and accurate.
+- The project does not include real-time data updates.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License
+
+Copyright (c) 2021 neuefische GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
