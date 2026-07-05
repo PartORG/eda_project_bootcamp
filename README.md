@@ -1,4 +1,3 @@
-
 # King County Housing Market - Exploratory Data Analysis Project
 
 An in-depth exploratory data analysis of the King County housing dataset, focused on luxury real estate investment strategies and market insights for high-end property buyers.
@@ -50,37 +49,55 @@ eda_project_bootcamp/
 └── requirements.txt            # Python dependencies
 ```
 
-## Analysis Steps
+## Features
 
-The analysis follows a structured 9-step approach documented in [EDA_Project.ipynb](EDA_Project.ipynb):
+### Exploratory Data Analysis (EDA)
+- **Data Cleaning & Imputation**: Handles missing values in critical features.
+- **Hypothesis Testing**: Validates 7 hypotheses about price drivers and market timing.
+- **Market Insights**: Identifies optimal buying/selling strategies.
+- **Property Recommendations**: Finds properties matching specific luxury criteria.
 
-1. **Load Data** - Import dataset from CSV
-2. **Understanding Data** - Initial exploration and summary statistics
-3. **Hypotheses** - Formulate 7 testable hypotheses
-4. **Correlation Matrix** - Identify feature relationships
-5. **Working with Missing Data** - Validate imputation strategies
-6. **Data Cleaning** - Apply transformations and handle missing values
-7. **Hypotheses Investigation** - Test and visualize each hypothesis
-8. **Client Insights** - Filter properties and generate recommendations
-9. **Final Results** - Summarize findings and delivery
+### Visualization
+- **Interactive Maps**: Uses Folium to create interactive maps of recommended properties.
+- **Correlation Matrix**: Visualizes relationships between features using Seaborn.
+
+## How It Works
+
+The project follows a structured 9-step approach:
+
+1. **Load Data** - Import dataset from CSV.
+2. **Understanding Data** - Initial exploration and summary statistics.
+3. **Hypotheses** - Formulate 7 testable hypotheses.
+4. **Correlation Matrix** - Identify feature relationships.
+5. **Working with Missing Data** - Validate imputation strategies.
+6. **Data Cleaning** - Apply transformations and handle missing values.
+7. **Hypotheses Investigation** - Test and visualize each hypothesis.
+8. **Client Insights** - Filter properties and generate recommendations.
+9. **Final Results** - Summarize findings and delivery.
+
+## Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Jupyter Notebook | Primary development environment for data analysis and visualization. |
+| Python | Programming language used for data manipulation, analysis, and visualization. |
+| Pandas | Data manipulation and analysis library. |
+| NumPy | Numerical computing library. |
+| Matplotlib & Seaborn | Data visualization libraries. |
+| Folium | Interactive maps library. |
+| Altair | Declarative statistical visualization library. |
+| SQLAlchemy | SQL toolkit and Object-Relational Mapping (ORM) library. |
+| psycopg2-binary | PostgreSQL database adapter for Python. |
+| ipywidgets | Interactive widgets for Jupyter Notebook. |
+| jupyterlab-dash | Integration of Dash with JupyterLab. |
+| python-dotenv | Loads environment variables from a `.env` file. |
 
 ## Requirements
 
 - pyenv
 - python==3.11.3
 
-## Dependencies
-
-Key libraries used in this project:
-- `pandas` - Data manipulation and analysis
-- `numpy` - Numerical computing
-- `matplotlib` & `seaborn` - Data visualization
-- `folium` - Interactive maps
-- Custom utility: `cartesian_interpolation` - Geographic imputation
-
-## Setup Instructions
-
-This repo contains a [requirements.txt](requirements.txt) file with all the packages and dependencies needed.
+## Installation
 
 ### macOS Setup
 
@@ -113,60 +130,87 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+## Configuration
+
+No specific configuration files or environment variables are required.
+
+## Quick Start
+
+To run the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PartORG/eda_project_bootcamp.git
+   cd eda_project_bootcamp
+   ```
+
+2. Set up the virtual environment and install dependencies:
+   ```bash
+   pyenv local 3.11.3
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+3. Run the Jupyter Notebook:
+   ```bash
+   jupyter lab EDA_Project.ipynb
+   ```
+
 ## Usage
 
-1. **Start with the main analysis notebook**: Open [EDA_Project.ipynb](EDA_Project.ipynb) in Jupyter Lab/Notebook
-2. **Run all cells** to reproduce the analysis
-3. **View generated outputs**:
-   - Statistical summaries and insights in the notebook
-   - Visualizations saved to the `images/` folder
-   - Interactive map: [map_jennifer_targets.html](map_jennifer_targets.html)
+To use this project, open the `EDA_Project.ipynb` notebook in JupyterLab and follow the steps outlined in the analysis.
 
-## Hypotheses Tested
+## Project Structure
 
-1. **H1 - Missing Waterfront Data**: Missing waterfront values represent non-waterfront properties (✅ VALIDATED)
-2. **H2 - Missing Year Renovated**: Missing renovation data means "never renovated" (✅ VALIDATED)
-3. **H3 - Waterfront Price Premium**: Waterfront properties have significantly higher prices (✅ VALIDATED)
-4. **H4 - Living Area & Price**: Non-linear relationship between size and price (✅ VALIDATED)
-5. **H5 - Renovation Effect**: Renovated properties sell for more (✅ VALIDATED)
-6. **H6 - Luxury Price Seasonality**: Luxury segment shows seasonal pricing patterns (✅ VALIDATED)
-7. **H7 - Sales Volume & Price**: Inverse relationship between volume and prices (✅ VALIDATED)
+```
+eda_project_bootcamp/
+├── EDA_Project.ipynb           # Main analysis notebook with all steps
+├── Fetch_Data_to_CSV.ipynb     # Data extraction from PostgreSQL
+├── data/
+│   └── eda.csv                 # King County housing dataset
+├── images/                     # Generated visualizations
+├── utils/
+│   └── cartesian_interpolation.py  # Custom imputation function
+├── useful_documentation/       # Project requirements and guides
+├── map_jennifer_targets.html   # Interactive map of recommended properties
+└── requirements.txt            # Python dependencies
+```
 
-## Key Visualizations
+## Development
 
-The project generates several executive dashboards:
-- **Waterfront Price Dependence** - Shows waterfront premium and grade distribution
-- **Renovation Price Impact** - Compares renovated vs non-renovated properties
-- **Price per Square Foot Analysis** - Identifies value opportunities in luxury segment
-- **Best Day to Buy** - Optimal timing for luxury purchases
-- **Best Month to Sell** - Seasonal pricing patterns for resale strategy
+The project is primarily developed using Jupyter Notebook. Dependencies are managed via `requirements.txt`.
 
-## Dataset
+## Testing
 
-**Source**: King County Housing Data (2014-2015)
-**Size**: 21,597 property records
-**Features**: 22 columns including price, location, size, condition, grade, waterfront status, etc.
+No tests exist for this project.
 
-### Key Features:
-- `price` - Sale price (target variable)
-- `grade` - Overall grade based on King County grading system (1-13)
-- `waterfront` - Property has waterfront view
-- `sqft_living` - Interior living space square footage
-- `year_renovated` - Year of renovation (0 if never renovated)
-- `view` - Quality of view (0-4)
-- `condition` - Overall condition (1-5)
+## Limitations
 
-## Results & Insights
-
-### Investment Strategy for Jennifer Montgomery:
-1. **Timing**: Buy on the 10th day of July or August, sell in September
-2. **Expected Return**: September sales command ~40% premium over August prices
-3. **Property Focus**: Zipcodes 98040 and 98008 dominate luxury waterfront market
-4. **Value Opportunity**: Larger luxury homes often have better price per square foot
-
-Only 5 properties (0.02% of dataset) match ALL strict criteria, highlighting the exclusivity of the luxury waterfront market.
+- The analysis assumes the dataset is complete and accurate.
+- The project does not include real-time data updates.
 
 ## License
 
-This project is part of MIT Licence.
- 
+MIT License
+
+Copyright (c) 2021 neuefische GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
